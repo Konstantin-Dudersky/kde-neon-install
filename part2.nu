@@ -108,6 +108,13 @@ let balenaetcher = {
     }
 }
 
+let bruno = {
+    prompt: "install Bruno",
+    closure: {
+        do { snap install bruno }
+    }
+}
+
 let cargo_tools = {
     prompt: "install cargo tools",
     closure: {
@@ -322,6 +329,13 @@ let virtualbox = {
     }
 }
 
+let vivaldi = {
+    prompt: "install Vivaldi",
+    closure: {
+        do { flatpak install flathub com.vivaldi.Vivaldi }
+    }
+}
+
 let vscode = {
     prompt: "install VSCode",
     closure: {
@@ -396,7 +410,9 @@ let command_list = [
     $inkscape,
     $obs_studio,
     $obsidian,
+    $vivaldi,
     # snap ---------------------------------------------------------------------
+    $vivaldi,
     $chromium,
     $dbeaver,
     $insomnia,
