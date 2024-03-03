@@ -112,7 +112,12 @@ let cargo_tools = {
     prompt: "install cargo tools",
     closure: {
         do { 
-            cargo install cargo-update 
+            curl -L --proto '=https' --tlsv1.2 -sSf https://raw.githubusercontent.com/cargo-bins/cargo-binstall/main/install-from-binstall-release.sh | bash
+            cargo install cargo-generate
+            cargo install cargo-rdme
+            cargo install cargo-outdated
+            cargo install --locked cargo-udeps
+            cargo install cargo-update
             cargo install cargo-workspaces
         }
     }
