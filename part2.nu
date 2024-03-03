@@ -256,13 +256,6 @@ let lunacy = {
     }
 }
 
-let mailspring = {
-    prompt: "install Mailsping",
-    closure: {
-        do { sudo snap install mailspring }
-    }
-}
-
 let nmap = {
     prompt: "install NMap",
     closure: {
@@ -418,7 +411,6 @@ let command_list = [
     $insomnia,
     $libreoffice,
     $lunacy,
-    $mailspring,
     $redisinsight,
     $telegram,
     $typora,
