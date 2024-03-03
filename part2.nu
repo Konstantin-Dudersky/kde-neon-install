@@ -57,7 +57,6 @@ let alacritty = {
             sudo update-desktop-database
             # copy config
             mkdir ~/.config/alacritty
-            cp extra/alacritty.yml ~/.config/alacritty
             # скачиваем темы
             git clone https://github.com/alacritty/alacritty-theme ~/.config/alacritty/themes
         }
