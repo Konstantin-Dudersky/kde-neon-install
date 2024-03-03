@@ -308,6 +308,13 @@ let typora = {
     }
 }
 
+let viber = {
+    prompt: "install Viber",
+    closure: {
+        do { flatpak install flathub com.viber.Viber }
+    }
+}
+
 let virt_manager = {
     prompt: "install virt-manager",
     closure: {
@@ -403,6 +410,7 @@ let command_list = [
     $inkscape,
     $obs_studio,
     $obsidian,
+    $viber,
     $vivaldi,
     # snap ---------------------------------------------------------------------
     $vivaldi,
