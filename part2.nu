@@ -413,7 +413,7 @@ let command_list = [
     $viber,
     $vivaldi,
     # snap ---------------------------------------------------------------------
-    $vivaldi,
+    $bruno,
     $chromium,
     $dbeaver,
     $insomnia,
