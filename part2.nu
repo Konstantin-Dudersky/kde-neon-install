@@ -117,7 +117,7 @@ let bruno = {
 let cargo_tools = {
     prompt: "install cargo tools",
     closure: {
-        do { 
+        do {
             curl -L --proto '=https' --tlsv1.2 -sSf https://raw.githubusercontent.com/cargo-bins/cargo-binstall/main/install-from-binstall-release.sh | bash
             cargo install cargo-generate
             cargo install cargo-rdme
@@ -196,7 +196,7 @@ let gimp = {
     prompt: "install GIMP",
     closure: {
         do {
-            flatpak install https://flathub.org/repo/appstream/org.gimp.GIMP.flatpakref
+            flatpak install flathub org.gimp.GIMP
         }
     }
 }
@@ -224,13 +224,6 @@ let inkscape = {
     prompt: "install Inkscape",
     closure: {
         do { flatpak install flathub org.inkscape.Inkscape }
-    }
-}
-
-let insomnia = {
-    prompt: "install Insomnia",
-    closure: {
-        do { sudo snap install insomnia }
     }
 }
 
@@ -275,7 +268,10 @@ let nodejs = {
 let obsidian = {
     prompt: "install obsidian",
     closure: {
-        do { flatpak install flathub md.obsidian.Obsidian }
+        do {
+            sudo snap install obsidian --classic
+            # flatpak install flathub md.obsidian.Obsidian
+        }
     }
 }
 
@@ -374,6 +370,15 @@ let zeal = {
     }
 }
 
+let zed = {
+    prompt: "install Zed",
+    closure: {
+        do {
+            curl -f https://zed.dev/install.sh | sh
+        }
+    }
+}
+
 let zellij = {
     prompt: "install Zellij",
     closure: {
@@ -391,6 +396,7 @@ let command_list = [
     $alacritty,
     $cargo_tools
     $zellij,
+    $zed,
     # apt ----------------------------------------------------------------------
     $anydesk,
     # $appimagelauncher,
@@ -408,16 +414,15 @@ let command_list = [
     $gimp,
     $inkscape,
     $obs_studio,
-    $obsidian,
     $viber,
     $vivaldi,
     # snap ---------------------------------------------------------------------
     $bruno,
     $chromium,
     $dbeaver,
-    $insomnia,
     $libreoffice,
     $lunacy,
+    $obsidian,
     $redisinsight,
     $telegram,
     $typora,
